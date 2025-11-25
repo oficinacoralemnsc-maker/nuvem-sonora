@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuvem Sonora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nuvem Sonora</h1>
+        <p>Experimente o som como você nunca ouviu: leve, imersivo e vivo.</p>
+        <button id="play">Tocar Ambiente</button>
+        <button id="pause">Pausar</button>
+    </header>
+
+    <section class="sobre">
+        <h2>O que é a Nuvem Sonora?</h2>
+        <p>
+            Uma plataforma que cria atmosferas sonoras dinâmicas, misturando música ambiente,
+            texturas eletrônicas e paisagens naturais para transformar qualquer espaço.
+        </p>
+    </section>
+
+    <section class="recursos">
+        <h2>Recursos</h2>
+        <ul>
+            <li>🎧 Ambientes sonoros em tempo real</li>
+            <li>🌫️ Sons que evoluem organicamente</li>
+            <li>🎚️ Mixagem inteligente</li>
+            <li>🔊 Conteúdos exclusivos e artesanais</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Nuvem Sonora — Todos os direitos reservados.</p>
+    </footer>
+
+    <audio id="audio" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2021/11/18/audio_8e32cc96e7.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(135deg, #202530, #3d4a60);
+    color: #f0f0f0;
+    text-align: center;
+}
+
+header {
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #8eb1ff;
+    color: #1a1f2b;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c6d9ff;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.recursos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recursos li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+footer {
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+const audio = document.getElementById("audio");
+
+document.getElementById("play").onclick = () => audio.play();
+document.getElementById("pause").onclick = () => audio.pause();
